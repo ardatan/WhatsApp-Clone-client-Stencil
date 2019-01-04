@@ -1,4 +1,5 @@
 import { Component, Prop, Listen } from '@stencil/core';
+import ApolloClient from 'apollo-boost';
 
 @Component({
   tag: 'app-root',
@@ -31,13 +32,15 @@ export class AppRoot {
 
   render() {
     return (
-      <ion-app>
-        <ion-router useHash={false}>
-          <ion-route url="/" component="app-home" />
-          <ion-route url="/profile/:name" component="app-profile" />
-        </ion-router>
-        <ion-nav />
-      </ion-app>
+      <apollo-provider client={new ApolloClient()}>
+        <ion-app>
+          <ion-router useHash={false}>
+            <ion-route url="/" component="app-home" />
+            <ion-route url="/profile/:name" component="app-profile" />
+          </ion-router>
+          <ion-nav />
+        </ion-app>
+      </apollo-provider>
     );
   }
 }

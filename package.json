@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0-rc.0",
-    "pwacompat": "^2.0.7"
+    "apollo-boost": "0.1.23",
+    "graphql": "14.0.2",
+    "pwacompat": "2.0.7",
+    "stencil-apollo": "0.0.1"
   },
   "devDependencies": {
     "@stencil/core": "0.16.1",
-    "@stencil/sass": "^0.1.1"
+    "@stencil/sass": "0.1.1"
   }
 }
