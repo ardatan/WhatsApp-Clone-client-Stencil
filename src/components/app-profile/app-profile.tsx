@@ -3,7 +3,7 @@ import { sayHello } from '../../helpers/utils';
 
 @Component({
   tag: 'app-profile',
-  styleUrl: 'app-profile.css'
+  styleUrl: 'app-profile.scss'
 })
 export class AppProfile {
 

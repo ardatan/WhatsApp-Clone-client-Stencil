@@ -1,3 +1,4 @@
+import 'pwacompat';
 import '@ionic/core';
 
 // import { setupConfig } from '@ionic/core';

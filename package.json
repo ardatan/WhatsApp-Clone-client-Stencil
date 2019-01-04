@@ -14,9 +14,11 @@
     "test.watch": "stencil test --spec --e2e --watch"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-rc.0"
+    "@ionic/core": "4.0.0-rc.0",
+    "pwacompat": "^2.0.7"
   },
   "devDependencies": {
-    "@stencil/core": "0.16.1"
+    "@stencil/core": "0.16.1",
+    "@stencil/sass": "^0.1.1"
   }
 }
