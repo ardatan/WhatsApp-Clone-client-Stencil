@@ -1,0 +1,10 @@
+overwrite: true
+schema: http://localhost:4000
+documents: ./src/**/*.graphql
+generates:
+  ./src/generated-models.tsx:
+    plugins:
+      - add: /* tslint:disable */
+      - typescript-common
+      - typescript-client
+      - typescript-stencil-apollo
