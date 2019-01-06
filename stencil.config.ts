@@ -15,6 +15,24 @@ export const config: Config = {
   globalScript: 'src/global/app.ts',
   globalStyle: 'src/global/app.scss',
   plugins: [
-    sass()
-  ]
+    sass(),
+    {
+      transform(source, id) {
+        return {
+          code: source
+            .replace(`var wrap = require('optimism').wrap;`, '')
+            .replace('export { wrap }', 'export { wrap } from "optimism";'),
+          id
+        };
+      }
+    }
+  ],
+  nodeResolve: {
+    browser: true,
+  },
+  commonjs: {
+    namedExports: {
+      'node_modules/subscriptions-transport-ws/dist/index.js': ['SubscriptionClient']
+    }
+  }
 };

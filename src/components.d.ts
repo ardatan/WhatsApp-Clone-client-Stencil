@@ -14,6 +14,13 @@ import 'stencil-apollo';
 
 export namespace Components {
 
+  interface AppAuthScreen {
+    'subScreen': 'sign-in' | 'sign-up';
+  }
+  interface AppAuthScreenAttributes extends StencilHTMLAttributes {
+    'subScreen'?: 'sign-in' | 'sign-up';
+  }
+
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
@@ -26,21 +33,39 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AppSignInForm {}
+  interface AppSignInFormAttributes extends StencilHTMLAttributes {}
+
+  interface AppSignUpForm {}
+  interface AppSignUpFormAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'AppAuthScreen': Components.AppAuthScreen;
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'AppSignInForm': Components.AppSignInForm;
+    'AppSignUpForm': Components.AppSignUpForm;
   }
 
   interface StencilIntrinsicElements {
+    'app-auth-screen': Components.AppAuthScreenAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-sign-in-form': Components.AppSignInFormAttributes;
+    'app-sign-up-form': Components.AppSignUpFormAttributes;
   }
 
+
+  interface HTMLAppAuthScreenElement extends Components.AppAuthScreen, HTMLStencilElement {}
+  var HTMLAppAuthScreenElement: {
+    prototype: HTMLAppAuthScreenElement;
+    new (): HTMLAppAuthScreenElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -60,16 +85,34 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppSignInFormElement extends Components.AppSignInForm, HTMLStencilElement {}
+  var HTMLAppSignInFormElement: {
+    prototype: HTMLAppSignInFormElement;
+    new (): HTMLAppSignInFormElement;
+  };
+
+  interface HTMLAppSignUpFormElement extends Components.AppSignUpForm, HTMLStencilElement {}
+  var HTMLAppSignUpFormElement: {
+    prototype: HTMLAppSignUpFormElement;
+    new (): HTMLAppSignUpFormElement;
+  };
+
   interface HTMLElementTagNameMap {
+    'app-auth-screen': HTMLAppAuthScreenElement
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'app-sign-in-form': HTMLAppSignInFormElement
+    'app-sign-up-form': HTMLAppSignUpFormElement
   }
 
   interface ElementTagNameMap {
+    'app-auth-screen': HTMLAppAuthScreenElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'app-sign-in-form': HTMLAppSignInFormElement;
+    'app-sign-up-form': HTMLAppSignUpFormElement;
   }
 
 

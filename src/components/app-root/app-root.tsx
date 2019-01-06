@@ -1,5 +1,5 @@
 import { Component, Prop, Listen } from '@stencil/core';
-import ApolloClient from 'apollo-boost';
+import apolloClient from '../../helpers/apollo-client';
 
 @Component({
   tag: 'app-root',
@@ -32,11 +32,18 @@ export class AppRoot {
 
   render() {
     return (
-      <apollo-provider client={new ApolloClient()}>
+      <apollo-provider client={apolloClient}>
         <ion-app>
           <ion-router useHash={false}>
-            <ion-route url="/" component="app-home" />
-            <ion-route url="/profile/:name" component="app-profile" />
+            <ion-route url='/sign-in' component='app-auth-screen' componentProps={{ subScreen: 'sign-in' }} />
+            <ion-route url='/sign-up' component='app-auth-screen' componentProps={{ subScreen: 'sign-up' }} />
+            <ion-route url='/chats' component='app-chats-list-screen' />
+            <ion-route url='/settings' component='app-settings' />
+            <ion-route url='/chats/:chatId' component='app-chat-screen' />
+            <ion-route url='/new-chat' component='app-new-chat-screen' />
+            <ion-route url='/new-chat/group' component='app-new-group-screen' />
+            <ion-route url='/new-chat/group/details' component='app-group-details-screen' />
+            <ion-route url='/chats/:chatId/details' component='app-group-details-screen' />
           </ion-router>
           <ion-nav />
         </ion-app>

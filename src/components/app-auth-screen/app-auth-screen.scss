@@ -1,0 +1,77 @@
+app-auth-screen {
+  ion-content {
+    --background: radial-gradient(rgb(34,65,67), rgb(17,48,50)), url(/assets/chat-background.jpg) no-repeat;
+    --background-size: cover;
+    --background-blend-mode: multiply;
+    --color: white;
+    .auth-screen-intro {
+      height: 265px;
+    }
+    .auth-screen-icon {
+      width: 125px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 70px;
+      display: block;
+    }
+    .auth-screen-title {
+      width: 100%;
+      text-align: center;
+      color: white;
+    }
+    .auth-screen-text-field {
+      width: 100%;
+      position: relative;
+    }
+    .auth-screen-text-field > div::before {
+      border-color: white !important;
+    }
+    .auth-screen-error {
+      position: absolute;
+      color: red;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    .auth-screen-alternative {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      a {
+        color: var(--secondary-bg);
+      }
+    }
+    ion-list-header {
+      font-weight: bold;
+      color: white;
+    }
+    ion-list {
+      background: transparent !important;
+      ion-item {
+        --background: transparent !important;
+      }
+    }
+    ion-label {
+      --color: white !important;
+    }
+    ion-input {
+      --color: white;
+      &::placeholder {
+        --color: var(--primary-bg);
+      }
+    }
+    ion-button {
+      width: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      --background-color: var(--secondary-bg) !important;
+      &[disabled] {
+        color: #38a81c;
+      }
+      &:not([disabled]) {
+        color: white;
+      }
+    }
+  }
+}
