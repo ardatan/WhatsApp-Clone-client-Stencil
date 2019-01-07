@@ -29,10 +29,5 @@ export const config: Config = {
   ],
   nodeResolve: {
     browser: true,
-  },
-  commonjs: {
-    namedExports: {
-      'node_modules/subscriptions-transport-ws/dist/index.js': ['SubscriptionClient']
-    }
   }
 };
