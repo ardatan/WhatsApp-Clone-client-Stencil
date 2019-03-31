@@ -129,6 +129,11 @@
   dependencies:
     node-sass "4.9.3"
 
+"@stencil/state-tunnel@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@stencil/state-tunnel/-/state-tunnel-0.0.8.tgz#c7425719e622e8ab5009f89edd6478dc69719c38"
+  integrity sha512-fpFU91hgEirWyzMD7hsTWkIK8li4VQgx5G+dZr2Iv/AU2ofF6AiAxqP2N5SGyszleJCn9UcgWKS31/+efaBxFw==
+
 "@types/babel-types@*":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.4.tgz#bfd5b0d0d1ba13e351dff65b6e52783b816826c8"
@@ -4060,10 +4065,12 @@ stealthy-require@^1.1.0:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-stencil-apollo@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/stencil-apollo/-/stencil-apollo-0.0.2.tgz#4cf4ac6a188b8068a4bad15c6f3a9bb07fd4102b"
-  integrity sha512-d0EvUGpbRgJ3gJixc4gcG4MT6NqEdonTkE2RrP3yGLDcaEbv7WDQxIqYaVA67RI51frCbYxxT5atkTR4GKTA1Q==
+stencil-apollo@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/stencil-apollo/-/stencil-apollo-0.0.4.tgz#61c5564edd9a468244ce02a5aab853132b3bed50"
+  integrity sha512-wvxA905cRP9U6m6vPEcdZKMVS1pQK2Y227uAQtJ3IM83nlTZzlSGNsaQH8n5GYxmCIpvrqQSD1n8Zln3XRjXOA==
+  dependencies:
+    "@stencil/state-tunnel" "0.0.8"
 
 string-range@~1.2, string-range@~1.2.1:
   version "1.2.2"
