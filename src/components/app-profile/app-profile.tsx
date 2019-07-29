@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 import { sayHello } from '../../helpers/utils';
 
 @Component({
@@ -28,7 +28,7 @@ export class AppProfile {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content>
         <p>
           {sayHello()}! My name is {this.formattedName()}. My name was passed in through a
           route param!
