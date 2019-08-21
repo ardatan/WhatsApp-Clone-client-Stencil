@@ -1,4 +1,4 @@
-import { Component, Prop, Listen } from '@stencil/core';
+import { Component, Prop, Listen, h } from '@stencil/core';
 import apolloClient from '../../helpers/apollo-client';
 import { getAuthHeader } from '../../helpers/auth-service';
 
@@ -38,21 +38,21 @@ export class AppRoot {
           <ion-router useHash={false}>
             {
               getAuthHeader() ?
-              [
-                <ion-route-redirect from='/' to='/chats' />,
-                <ion-route url='/chats' component={'app-chats-list-screen'} />,
-                <ion-route url='/settings' component={'app-settings'} />,
-                <ion-route url='/chats/:chatId' component={'app-chat-screen'} />,
-                <ion-route url='/new-chat' component={'app-new-chat-screen'} />,
-                <ion-route url='/new-chat/group' component={'app-new-group-screen'} />,
-                <ion-route url='/new-chat/group/details' component={'app-group-details-screen'} />,
-                <ion-route url='/chats/:chatId/details' component={'app-group-details-screen'} />
-              ]
-              : [
-                <ion-route-redirect from='/*' to='/sign-in' />,
-                <ion-route url='/sign-in' component='app-auth-screen' componentProps={{ subScreen: 'sign-in ' }} />,
-                <ion-route url='/sign-up' component='app-auth-screen' componentProps={{ subScreen: 'sign-up' }} />,
-              ]
+                [
+                  <ion-route-redirect from='/' to='/chats' />,
+                  <ion-route url='/chats' component={'app-chats-list-screen'} />,
+                  <ion-route url='/settings' component={'app-settings'} />,
+                  <ion-route url='/chats/:chatId' component={'app-chat-screen'} />,
+                  <ion-route url='/new-chat' component={'app-new-chat-screen'} />,
+                  <ion-route url='/new-chat/group' component={'app-new-group-screen'} />,
+                  <ion-route url='/new-chat/group/details' component={'app-group-details-screen'} />,
+                  <ion-route url='/chats/:chatId/details' component={'app-group-details-screen'} />
+                ]
+                : [
+                  <ion-route-redirect from='/*' to='/sign-in' />,
+                  <ion-route url='/sign-in' component='app-auth-screen' componentProps={{ subScreen: 'sign-in ' }} />,
+                  <ion-route url='/sign-up' component='app-auth-screen' componentProps={{ subScreen: 'sign-up' }} />,
+                ]
             }
           </ion-router>
           <ion-nav />

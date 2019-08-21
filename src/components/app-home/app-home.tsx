@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
@@ -14,7 +14,7 @@ export class AppHome {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content>
         <p>
           Welcome to the PWA Toolkit. You can use this starter to build entire
           apps with web components using Stencil and ionic/core! Check out the

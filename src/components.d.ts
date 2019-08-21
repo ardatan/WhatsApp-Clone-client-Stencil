@@ -5,60 +5,23 @@
  */
 
 
-import '@stencil/core';
-
-import '@ionic/core';
-import 'ionicons';
-import 'stencil-apollo';
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
   interface AppAuthScreen {
     'subScreen': 'sign-in' | 'sign-up';
   }
-  interface AppAuthScreenAttributes extends StencilHTMLAttributes {
-    'subScreen'?: 'sign-in' | 'sign-up';
-  }
-
   interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
   interface AppProfile {
     'name': string;
   }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
-    'name'?: string;
-  }
-
   interface AppRoot {}
-  interface AppRootAttributes extends StencilHTMLAttributes {}
-
   interface AppSignInForm {}
-  interface AppSignInFormAttributes extends StencilHTMLAttributes {}
-
   interface AppSignUpForm {}
-  interface AppSignUpFormAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'AppAuthScreen': Components.AppAuthScreen;
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
-    'AppRoot': Components.AppRoot;
-    'AppSignInForm': Components.AppSignInForm;
-    'AppSignUpForm': Components.AppSignUpForm;
-  }
-
-  interface StencilIntrinsicElements {
-    'app-auth-screen': Components.AppAuthScreenAttributes;
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
-    'app-root': Components.AppRootAttributes;
-    'app-sign-in-form': Components.AppSignInFormAttributes;
-    'app-sign-up-form': Components.AppSignUpFormAttributes;
-  }
 
 
   interface HTMLAppAuthScreenElement extends Components.AppAuthScreen, HTMLStencilElement {}
@@ -96,17 +59,7 @@ declare global {
     prototype: HTMLAppSignUpFormElement;
     new (): HTMLAppSignUpFormElement;
   };
-
   interface HTMLElementTagNameMap {
-    'app-auth-screen': HTMLAppAuthScreenElement
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
-    'app-root': HTMLAppRootElement
-    'app-sign-in-form': HTMLAppSignInFormElement
-    'app-sign-up-form': HTMLAppSignUpFormElement
-  }
-
-  interface ElementTagNameMap {
     'app-auth-screen': HTMLAppAuthScreenElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
@@ -114,14 +67,37 @@ declare global {
     'app-sign-in-form': HTMLAppSignInFormElement;
     'app-sign-up-form': HTMLAppSignUpFormElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+declare namespace LocalJSX {
+  interface AppAuthScreen extends JSXBase.HTMLAttributes<HTMLAppAuthScreenElement> {
+    'subScreen'?: 'sign-in' | 'sign-up';
+  }
+  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
+  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
+    'name'?: string;
+  }
+  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+  interface AppSignInForm extends JSXBase.HTMLAttributes<HTMLAppSignInFormElement> {}
+  interface AppSignUpForm extends JSXBase.HTMLAttributes<HTMLAppSignUpFormElement> {}
+
+  interface IntrinsicElements {
+    'app-auth-screen': AppAuthScreen;
+    'app-home': AppHome;
+    'app-profile': AppProfile;
+    'app-root': AppRoot;
+    'app-sign-in-form': AppSignInForm;
+    'app-sign-up-form': AppSignUpForm;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+
