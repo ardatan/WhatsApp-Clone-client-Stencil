@@ -28,7 +28,7 @@
     "subscriptions-transport-ws": "0.9.15"
   },
   "devDependencies": {
-    "@stencil/core": "0.17.0",
+    "@stencil/core": "1.17.3",
     "@stencil/sass": "0.1.1",
     "@types/node": "10.12.18",
     "graphql-code-generator": "0.15.2",
