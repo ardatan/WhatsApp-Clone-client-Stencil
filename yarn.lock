@@ -3468,10 +3468,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-pwacompat@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/pwacompat/-/pwacompat-2.0.7.tgz#191f8d9d7fa66de0f0f928b904d66cdc708ff415"
-  integrity sha512-t4dhQguv6SGUn+BEwdENse7ayrTtqGTR24jxWBdEcVLrkwvGZrx4PDaY2libDWdsAsLH2LfW9lm09pJG/+49fg==
+pwacompat@2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/pwacompat/-/pwacompat-2.0.17.tgz#707959ff97f239bf1fe7b260b63aeea416a15eab"
+  integrity sha512-6Du7IZdIy7cHiv7AhtDy4X2QRM8IAD5DII69mt5qWibC2d15ZU8DmBG1WdZKekG11cChSu4zkSUGPF9sweOl6w==
 
 qs@~6.5.1, qs@~6.5.2:
   version "6.5.2"
