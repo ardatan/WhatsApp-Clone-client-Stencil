@@ -99,12 +99,12 @@
     graphql-tools "4.0.3"
     tslib "1.9.3"
 
-"@ionic/core@4.0.0-rc.2":
-  version "4.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-4.0.0-rc.2.tgz#16eb8d1ea66e32a834ee95405973532a2b065147"
-  integrity sha512-01zoQOhb7PzjJwQYwfmiiGYp6iPfDJFLds7KSiXZVafzihwWvL6Bsww5EWYLXcJ8nl0w2izoaGs74f+zBQW5Lw==
+"@ionic/core@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-4.0.3.tgz#89795844bfa89c9398a94fc646d133c8b891e2f1"
+  integrity sha512-a5PjlochtCxMJxa+1iW3AEhM7UW3VXjuI6GB273H62Xo67a6GiFW+HZ1OM3Ol/GNUN8bskfeyEwhBWGdn7XR6g==
   dependencies:
-    ionicons "4.5.1"
+    ionicons "4.5.5"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -2095,10 +2095,10 @@ invert-kv@^1.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
   integrity sha1-EEqOSqym09jNFXqO+L+rLXo//bY=
 
-ionicons@4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.5.1.tgz#a180e8948256e6337c2d290eb07f9113dc7b09eb"
-  integrity sha512-zqfkjpPKsdzzXePdE03IRw6xt7B6N3fcN/7NepyniuEWhKZLy7YpdZLegEwBmKeciXi7rIcv1O/hHJTdokUwXQ==
+ionicons@4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.5.5.tgz#b059958a54dd45cfa127acc0baf11503b8671e51"
+  integrity sha512-dIGI73XG6Fg2Ps77ry5Ywe36Pq7wUGkDkl0pBhC4uhsiyoW+oXe+pplmarXEnKEcB5fmlkRrBOxYYzZaoRiUGw==
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
