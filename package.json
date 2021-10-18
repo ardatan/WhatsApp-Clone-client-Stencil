@@ -30,7 +30,7 @@
   "devDependencies": {
     "@stencil/core": "0.17.0",
     "@stencil/sass": "0.1.1",
-    "@types/node": "10.12.18",
+    "@types/node": "14.17.27",
     "graphql-code-generator": "0.15.2",
     "graphql-codegen-typescript-client": "0.15.2",
     "graphql-codegen-typescript-common": "0.15.2",
